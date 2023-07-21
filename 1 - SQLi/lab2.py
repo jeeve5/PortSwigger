@@ -6,6 +6,8 @@ import re #importing regex for the csrf token
 
 # https://0af100220436670d804c85f9007d00ad.web-security-academy.net/login
 
+"""Lab2: SQL inection vulnerability in the login form allowing login as administrator without the requirement for a password. Script to exploit SQL injection in the login form. """
+
 #need to capture the session cookie and csrf token in a get request then craft the payload to send in a  post req. can then send this in the exploit function
     
 def get_csrf(base_url: str, session) -> str:
