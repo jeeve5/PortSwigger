@@ -3,6 +3,8 @@
 import requests  # to make web requests
 import sys  # system module to use for arguments
 
+"""Lab 1: SQL injection vulnerability in the WHERE clause allowing retrieval of hidden data. Script to exploit SQL injection in the filter parameter of the URL. """
+
 # https://0ac300070377a20580f6172000b7008d.web-security-academy.net/filter?category=Gifts
 
 
