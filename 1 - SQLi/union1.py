@@ -3,6 +3,9 @@
 import requests  # to make web requests
 import sys  # system module to use for arguments
 
+"""Lab: SQL injection UNION attack, finding a column containing text. 
+This code is used to find the number of columns in the table. It does this by using the union statement and adding nulls to the end of the statement. It then checks the response code, if it is 200 then it has successfully found the number of columns in the table. If it is not 200 then it adds more nulls to the end of the statement and checks the response code again. It keeps doing this until it finds the number of columns in the table. It also prints out the number of columns in the table once it has found it. """
+
 
 def exploit(base_url: str) -> None:
     null = "NULL" #adding null variable
