@@ -51,3 +51,4 @@ def main() -> None:
 if __name__ == "__main__":
     main()
 
+#Line 45 is checking if the result is true by checking if the returned character is greater than the previous character. This is done when the min_char and max_char are equal, which means that the script has found the correct character for the password. If the returned character is greater than the previous character, then the script continues to build the password by adding the character to the password string. If the returned character is not greater than the previous character, then the script has found the complete password and prints it out.
